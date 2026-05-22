@@ -1,20 +1,11 @@
-package exercicio1;
+package atividade4.exercicio1;
 
-public class ContaBancaria {
-	 String cliente;
-	 int numeroConta;
-	 int saldo;
-	 
-	 public ContaBancaria(String cliente, int numeroConta, int saldo) {
-		 this.cliente = cliente;
-		 this.numeroConta = numeroConta;
-		 this.saldo = saldo;
-		 
-	 }
-	 
-	 
-	 // Método sacar (o saldo não pode ficar negativo)
-	 // Método depositar
+public class Principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
 
 }
 
@@ -35,7 +26,6 @@ e atualiza o saldo.
 o Limite;
 o Redefinição do método sacar, permitindo saldo negativo até o valor do
 limite;
-///////////////////////////////////////////////////////////////////
 Após a implementação das classes acima, você deverá implementar uma classe
 Contas, contendo o método principal. Nesta classe, você deverá implementar:
 1. Incluir dados relativos a(s) conta(s) de um cliente;
@@ -44,4 +34,3 @@ Contas, contendo o método principal. Nesta classe, você deverá implementar:
 4. Mostrar o novo saldo do cliente, a partir da taxa de rendimento, daqueles que
 possuem conta poupança;
 5. Mostrar os dados da(s) conta(s) de um cliente.*/
-

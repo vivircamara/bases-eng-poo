@@ -1,4 +1,4 @@
-package exercicio3;
+package atividade3.exercicio3;
 public class Funcionario {
 	
 	private int idFuncionario;
