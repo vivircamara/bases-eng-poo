@@ -1,9 +1,11 @@
 package atividade4.exercicio1;
 
 public class ContaBancaria {
-	 String cliente;
-	 int numeroConta;
-	 int saldo;
+	 protected String cliente;
+	 protected int numeroConta;
+	 protected double saldo;
+	 
+	 //entender protect, private, etc
 	 
 	 public ContaBancaria(String cliente, int numeroConta, int saldo) {
 		 this.cliente = cliente;
@@ -14,8 +16,28 @@ public class ContaBancaria {
 	 
 	 
 	 // Método sacar (o saldo não pode ficar negativo)
-	 // Método depositar
+	 public double sacar( int saque) {
+		
+		 this.saldo = saldo - saque;
+		 return saldo;
+	 }
+	 //Método depositar
+	 //cammelCase
+	 public double depositar(int deposito) {
+		 this.saldo = saldo + deposito;
+		 return saldo;
+	 }
+	 //cammelCase
+	//Normalmente os métodos do tipo "ação" são sempre return? E depois você faz um sysout dele?
 
+	 public void exibirDados() {
+		 System.out.println("Nome do cliente: " + cliente);
+		 System.out.println("Número da conta: " + numeroConta);
+		 System.out.printf("Saldo: %.0f \n",  saldo);
+
+	 }
+	 
+	 
 }
 
 /*Exercício 1 – Conta Bancária: Elabore uma classe ContaBancaria, com os seguintes
@@ -25,6 +47,7 @@ membros:
 • Saldo
 • Método sacar (o saldo não pode ficar negativo)
 • Método depositar
+////////////////////////////////////////////////////////////////////
 Agora acrescente ao projeto duas classes herdadas de ContaBancaria: ContaPoupança
 e ContaEspecial, com as seguintes características a mais:
 • Classe ContaPoupança:
