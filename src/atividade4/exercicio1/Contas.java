@@ -1,11 +1,12 @@
 package atividade4.exercicio1;
-import java.util.Scanner;
+//import java.util.Scanner;
 
-public class Principal {
+public class Contas {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		//caso queira usar o scanner nesta atividade
 		/*Scanner scanner = new Scanner(System.in);
 		
 		System.out.print("Insira o valor para saque ");
@@ -16,15 +17,18 @@ public class Principal {
 		  
 		scanner.close();*/
 		
-		//ContaBancaria novaContaBancaria = new ContaBancaria("Lara", 1234, 300);
-		//ContaEspecial novaContaEspecial = new ContaEspecial("Lara", 1234, 300, 3);
+		ContaBancaria novaContaBancaria = new ContaBancaria("Lara", 91011, 300);
+		ContaEspecial novaContaEspecial = new ContaEspecial("Lara", 5678, 300, 1000);
 		ContaPoupanca novaContaPoupanca = new ContaPoupanca("Lara", 1234, 300, 3);
 
-		//novaContaBancaria.sacar(saque);
-		//novaContaBancaria.depositar(deposito);
+		novaContaPoupanca.sacar(200);
+		novaContaPoupanca.depositar(100);
 		
-		//novaContaBancaria.exibirDados();
-		//novaContaEspecial.exibirDados();
+		novaContaEspecial.sacar(600);
+		novaContaEspecial.depositar(10);
+		
+		novaContaBancaria.exibirDados();
+		novaContaEspecial.exibirDados();
 		novaContaPoupanca.exibirDados();
 	}
 
@@ -42,18 +46,23 @@ Agora acrescente ao projeto duas classes herdadas de ContaBancaria: ContaPoupan�
 e ContaEspecial, com as seguintes características a mais:
 
 • Classe ContaPoupança:
-	o Dia de rendimento;
+	o Dia de rendimento;%
 	o Método “calcularNovoSaldo”, recebe a taxa de rendimento da poupança
-	e atualiza o saldo.
+	e atualiza o saldo.%
 • Classe ContaEspecial:
-	o Limite;
+	o Limite;%
 	o Redefinição do método sacar, permitindo saldo negativo até o valor do
-	limite;
+	limite; %
 Após a implementação das classes acima, você deverá implementar uma classe
 Contas, contendo o método principal. Nesta classe, você deverá implementar:
 1. Incluir dados relativos a(s) conta(s) de um cliente;
 2. Sacar um determinado valor da(s) sua(s) conta(s);
 3. Depositar um determinado valor na(s) sua(s) conta(s);
 4. Mostrar o novo saldo do cliente, a partir da taxa de rendimento, daqueles que
-possuem conta poupança;
-5. Mostrar os dados da(s) conta(s) de um cliente.*/
+possuem conta poupança;%
+5. Mostrar os dados da(s) conta(s) de um cliente.%
+*/
+
+
+
+

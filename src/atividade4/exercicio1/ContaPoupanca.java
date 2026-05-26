@@ -16,8 +16,12 @@ public class ContaPoupanca extends ContaBancaria {
 	
 	@Override
 	 public void exibirDados() {
-		super.exibirDados();
+		//super.exibirDados();
+	    System.out.println("Número da conta poupança: " + numeroConta);
+	    System.out.printf("Saldo: %.0f \n",  saldo);		
+	    System.out.printf("Novo saldo do cliente com a taxa de tendimento: %.0f",  calcularNovoSaldo());
 		System.out.println("Dia de rendimento: " + diaRendimento); 
+		
 
 	 }
 	 

@@ -16,10 +16,14 @@ public class ContaBancaria {
 	 
 	 
 	 // Método sacar (o saldo não pode ficar negativo)
-	 public double sacar( int saque) {
-		
-		 this.saldo = saldo - saque;
-		 return saldo;
+	 public double sacar( double saque) {
+		if(saque > saldo) {
+			System.out.println("Saldo menor do que o valor de saque. Tente novamente.");
+			return 0;
+		} else {
+			this.saldo = saldo - saque;
+			return saldo;
+		}	
 	 }
 	 //Método depositar
 	 //cammelCase
@@ -32,7 +36,7 @@ public class ContaBancaria {
 
 	 public void exibirDados() {
 		 System.out.println("Nome do cliente: " + cliente);
-		 System.out.println("Número da conta: " + numeroConta);
+		 System.out.println("Número da conta bancária: " + numeroConta);
 		 System.out.printf("Saldo: %.0f \n",  saldo);
 
 	 }
