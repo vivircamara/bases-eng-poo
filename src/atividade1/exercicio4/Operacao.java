@@ -35,6 +35,7 @@ public class Operacao {
 			System.out.println("Digite um valor válido");
 			return 0;
 		} //Como fazer o tratamento de erros?
+		//deixar para fazer o tratamento de dados no main, futuramente
 	}
 	
 	
