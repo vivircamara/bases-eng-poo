@@ -9,17 +9,17 @@ public class Principal {
 		//não conseguimos instanciar o objeto Jogo (classe abstrata)
 		//Jogo jogoCartas = new Jogo("Uno", 4);
 		
-		Scanner scanner = new Scanner(System.in);
+		/*Scanner scanner = new Scanner(System.in);
 				
 		System.out.println("Digite o nome do primeiro jogador");
 		String j1 = scanner.next();
 		
 		System.out.println("Digite o nome do segundo jogador");
 		String j2 = scanner.next();
-		scanner.close();
+		scanner.close();*/
 		
 		//j1= Claudio, j2 = Lauro
-		JogoTabuleiro jogoTabuleiro = new JogoTabuleiro("Banco imobiliario", 2, "Quadrado", j1, j2);
+		JogoTabuleiro jogoTabuleiro = new JogoTabuleiro("Banco imobiliario", 2, "Quadrado", "Claudio", "Lauro");
 		jogoTabuleiro.iniciar();
 		jogoTabuleiro.exibirRegras();
 		jogoTabuleiro.andarCasas();
