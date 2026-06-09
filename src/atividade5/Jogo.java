@@ -14,7 +14,6 @@ public abstract class Jogo {
 	//métodos abstrato
 	public abstract void iniciar();
 	public abstract void exibirRegras();
-	//public abstract void andarCasas();
 	
 	//método concreto
 	public String toString() {

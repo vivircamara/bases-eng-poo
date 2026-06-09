@@ -1,35 +1,33 @@
 package atividade5;
 
 import java.util.Random;
+import java.util.Scanner;
+
+
 
 public class JogoTabuleiro extends Jogo {
 	Random gerador = new Random();
+
+	Scanner scanner = new Scanner(System.in);
 	
 	//atributos
 	private String tipoTabuleiro;
 	private int casasTotal = 20;
-	//private int casaAtual = 0;
 	 int casaAtualJ1 = 0;
 	 int casaAtualJ2 = 0;
-	//private int valorDado = 2;
 	private int jogadas = 0;
 	private int rodadas;
 	int valorDado;
-	//= gerador.nextInt(6) + 1; // será que meu if dentro do while quebra se eu tirar essa linha?
-	private String jogadorUm;
-	private String jogadorDois;
-	//private String j1;
-	//private String j2;
+	private Scanner leitor;
 	
 	//construtor
-	public JogoTabuleiro(String nome, int numeroJogadores, String tipoTabuleiro, String jogadorUm, String jogadorDois) {
+	public JogoTabuleiro(String nome, int numeroJogadores, String tipoTabuleiro, Scanner leitor) {
 		super(nome, numeroJogadores);
 		this.tipoTabuleiro = tipoTabuleiro;
-		this.jogadorUm = jogadorUm;
-		this.jogadorDois = jogadorDois;
+		this.leitor = leitor;
 	}
 	
-	//primeira tentativa de criar o método andarCasas, erro: não considerei os dois jogadores da forma correta ://
+	//primeira tentativa de criar o método andarCasas, erro: não considerei os dois jogadores da forma correta ://, também esqueci que tudo deveria ser criado dentro de iniciar jogo
 /*	public  void andarCasas() {
 		System.out.println("Casa incial: " + casaAtual);
 		while(casaAtual  < casasTotal) {
@@ -60,9 +58,15 @@ public class JogoTabuleiro extends Jogo {
 			//return casaAtual;	
 	} */
 	
-	//Segunda tentativa, feita com auxílio de pesquisas, levando em conta os dois jogadores
-	public void andarCasas() {
-	  
+	//métodos abstratos e concretos
+	@Override
+	public void iniciar() {	
+		System.out.println("Digite o nome do primeiro jogador");
+		String jogadorUm = leitor.next();
+		
+		System.out.println("Digite o nome do segundo jogador");
+		String jogadorDois = leitor.next();
+
 	    boolean vezDoJ1 = true; // --> se for true é a vez do J1, se for false é do J2
 	    System.out.println("Casa inicial dos jogadores: 0");
 	    while(casaAtualJ1 < casasTotal && casaAtualJ2 < casasTotal) {
@@ -108,17 +112,11 @@ public class JogoTabuleiro extends Jogo {
 	    }
 	}
 	
-	//métodos abstratos e concretos
-	@Override
-	public void iniciar() {
-		System.out.println("Jogo de tabuleiro: " + super.nome);
-	}
-	
 	@Override
 	public void exibirRegras() {
+		System.out.println("Jogo de tabuleiro: " + super.nome);
 		System.out.println("Cada jogador deve mover "
 				+ "suas peças no tabuleiro");
-		//System.out.println(andarCasas());
 	}
 	
 	@Override
@@ -130,6 +128,7 @@ public class JogoTabuleiro extends Jogo {
 /*2 - Classe JogoTabuleiro
 ● Simulação de movimentação de jogadores no tabuleiro; %
 ● Sorteio de valores de dado;%
-● Controle da posição de cada jogador;
-● Identificação do jogador vencedor;
+● Controle da posição de cada jogador;%
+● Identificação do jogador vencedor;%
 ● Exibição do número total de rodadas realizadas% --> adicionar contador ou casa atual final / casastotal*/
+
