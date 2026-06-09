@@ -28,5 +28,14 @@ public class JogoCartas extends Jogo {
 	public String toString() {
 		return super.toString()+
 				" Tipo baralho: " + tipoBaralho;
-	}S
+	}
 }
+
+/*1 - Classe JogoCartas
+● Implemente no método iniciar() uma lógica contendo:%
+● Validação da quantidade mínima e máxima de jogadores;
+● Simulação de distribuição de cartas para os jogadores;
+● Definição automática da quantidade de cartas por jogador;
+● Exibição do nome do vencedor de uma rodada (pode ser aleatório);
+● Exibição do total de cartas restantes no baralho.
+*/
